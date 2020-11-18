@@ -1,11 +1,11 @@
 ###############################################################################
-# Makefile for the project CAN_NODE1
+# Makefile for the project Motor_Control
 ###############################################################################
 
 ## General Flags
-PROJECT = CAN_NODE1
+PROJECT = Motor_Control
 MCU = at90can128
-TARGET = CAN_NODE1.elf
+TARGET = Motor_Control.elf
 CC = avr-gcc
 
 CPP = avr-g++
@@ -25,7 +25,7 @@ ASMFLAGS += -x assembler-with-cpp -Wa,-gdwarf2
 
 ## Linker flags
 LDFLAGS = $(COMMON)
-LDFLAGS +=  -Wl,-Map=CAN_NODE1.map
+LDFLAGS +=  -Wl,-Map=Motor_Control.map
 
 
 ## Intel Hex file production flags
@@ -37,22 +37,19 @@ HEX_EEPROM_FLAGS += --change-section-lma .eeprom=0 --no-change-warnings
 
 
 ## Objects that must be built in order to link
-OBJECTS = CAN_NODE1.o lcdControl.o myCANLib.o 
+OBJECTS = Motor_Control.o lcdControl.o 
 
 ## Objects explicitly added by the user
 LINKONLYOBJECTS = 
 
 ## Build
-all: $(TARGET) CAN_NODE1.hex CAN_NODE1.eep CAN_NODE1.lss size
+all: $(TARGET) Motor_Control.hex Motor_Control.eep Motor_Control.lss size
 
 ## Compile
-CAN_NODE1.o: ../CAN_NODE1.c
+Motor_Control.o: ../Motor_Control.c
 	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
 
 lcdControl.o: ../lcdControl.c
-	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
-
-myCANLib.o: ../myCANLib.c
 	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
 
 ##Link
@@ -75,7 +72,7 @@ size: ${TARGET}
 ## Clean target
 .PHONY: clean
 clean:
-	-rm -rf $(OBJECTS) CAN_NODE1.elf dep/* CAN_NODE1.hex CAN_NODE1.eep CAN_NODE1.lss CAN_NODE1.map
+	-rm -rf $(OBJECTS) Motor_Control.elf dep/* Motor_Control.hex Motor_Control.eep Motor_Control.lss Motor_Control.map
 
 
 ## Other dependencies

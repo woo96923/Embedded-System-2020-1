@@ -37,7 +37,7 @@ HEX_EEPROM_FLAGS += --change-section-lma .eeprom=0 --no-change-warnings
 
 
 ## Objects that must be built in order to link
-OBJECTS = CAN_NODE2.o 
+OBJECTS = CAN_NODE2.o lcdControl.o myCANLib.o 
 
 ## Objects explicitly added by the user
 LINKONLYOBJECTS = 
@@ -47,6 +47,12 @@ all: $(TARGET) CAN_NODE2.hex CAN_NODE2.eep CAN_NODE2.lss size
 
 ## Compile
 CAN_NODE2.o: ../CAN_NODE2.c
+	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
+
+lcdControl.o: ../lcdControl.c
+	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
+
+myCANLib.o: ../myCANLib.c
 	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
 
 ##Link

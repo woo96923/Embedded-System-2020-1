@@ -1,4 +1,4 @@
-CAN_NODE1.o: ../CAN_NODE1.c \
+Motor_Control.o: ../Motor_Control.c \
  c:\program\ files\ (x86)\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.6.2/../../../../avr/include/avr/io.h \
  c:\program\ files\ (x86)\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.6.2/../../../../avr/include/avr/sfr_defs.h \
  c:\program\ files\ (x86)\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.6.2/../../../../avr/include/inttypes.h \
@@ -15,8 +15,7 @@ CAN_NODE1.o: ../CAN_NODE1.c \
  c:\program\ files\ (x86)\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.6.2/../../../../avr/include/stdio.h \
  c:\program\ files\ (x86)\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.6.2/include/stdarg.h \
  c:\program\ files\ (x86)\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.6.2/include/stddef.h \
- ../myDelay.h ../lcdControl.h ../myCANLib.h ../myDelay.c ../lcdControl.c \
- ../myCANLib.c
+ ../lcdControl.h
 
 c:\program\ files\ (x86)\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.6.2/../../../../avr/include/avr/io.h:
 
@@ -50,14 +49,4 @@ c:\program\ files\ (x86)\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.6.
 
 c:\program\ files\ (x86)\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.6.2/include/stddef.h:
 
-../myDelay.h:
-
 ../lcdControl.h:
-
-../myCANLib.h:
-
-../myDelay.c:
-
-../lcdControl.c:
-
-../myCANLib.c:
